@@ -149,6 +149,8 @@ return [
         'title' => 'タイトル',
         'comment' => 'コメント',
         'name' => '名前', 
+        'description' => '商品説明',
+        'price' => '価格',
         'email' => 'メールアドレス',
         'password' => 'パスワード',
         'password_confirmation' => 'パスワード（確認用）',
