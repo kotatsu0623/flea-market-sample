@@ -147,7 +147,11 @@ return [
 
     'attributes' => [
         'title' => 'タイトル',
-        'log' => '内容',
+        'comment' => 'コメント',
+        'name' => '名前', 
+        'email' => 'メールアドレス',
+        'password' => 'パスワード',
+        'password_confirmation' => 'パスワード（確認用）',
         ],
 
 ];
