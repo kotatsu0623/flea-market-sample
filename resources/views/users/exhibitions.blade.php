@@ -9,9 +9,9 @@
     @forelse($items as $item)
         <p>{{ $item->orders->count() > 0 ? '売り切れ' : '販売中' }}</p>
       
-        <p>{{ $item->description }}</p>
-        <p>商品名: {{ $item->name }} {{ $item->price }}円</p>
-        <p>カテゴリ:{{ $item->category->name }}{{ $item->created_at }}</p>
+        <p>商品説明: {{ $item->description }}</p>
+        <p>商品名: {{ $item->name }}<br>価格: {{ $item->price }}円</p>
+        <p>カテゴリ:{{ $item->category->name }}<br>{{ $item->created_at }}</p>
         <div class="item_body_main">
           <div class="item_body_main_img">
             @if($item->image !== '')

@@ -5,8 +5,8 @@
 @section('content')
   <h1>{{ $title }}</h1>
     @if($item !== null)
-        <p>商品名: {{ $item->name }} {{ $item->price }}円</p>
-        <p>カテゴリ:{{ $item->category->name }}{{ $item->created_at }}</p>
+        <p>商品名: {{ $item->name }}<br>価格: {{ $item->price }}円</p>
+        <p>カテゴリ:{{ $item->category->name }}<br>{{ $item->created_at }}</p>
         <div class="item_body_main">
           <div class="item_body_main_img">
             @if($item->image !== '')
@@ -20,7 +20,7 @@
           </div>
         </div>
         
-        <p>説明：{{ $item->description }}</p>
+        <p>商品説明：{{ $item->description }}</p>
         <a href="{{ route('items.confirm', $item) }}">購入する</a>
         
     @else

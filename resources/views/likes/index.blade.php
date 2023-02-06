@@ -2,19 +2,14 @@
  
 @section('content')
   <h1>{{ $title }}</h1>
- 
-  <ul class="items">
       @forelse($like_items as $item)
-          <li class="item like_item">
+          <div class="item like_item">
             <img src="{{ asset('storage/' . $item->image) }}">
-            <p>{{ $item->description }}</p>
-            <div class="item_body_main_comment">
-              <p>商品名: {{ $item->name }} {{ $item->price }}円</p>
-              <p>カテゴリ:{{ $item->category->name }}{{ $item->created_at }}</p>
-            </div>
-          </li>
+            <p>商品説明: {{ $item->description }}</p>
+            <p>商品名: {{ $item->name }}<br>価格: {{ $item->price }}円</p>
+            <p>カテゴリ:{{ $item->category->name }}<br>{{ $item->created_at }}</p>
+          </div>
       @empty
-          <li>商品はありません。</li>
+          <p>商品はありません。</p>
       @endforelse
-  </ul>
 @endsection
